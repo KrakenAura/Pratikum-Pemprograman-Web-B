@@ -1,0 +1,10 @@
+Input Type:
+- Textarea
+- Checkbox
+- Radio
+- date
+- number
+- text
+- password
+- select --> option
+- email
