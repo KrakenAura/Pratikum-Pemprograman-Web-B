@@ -34,3 +34,7 @@
   flex-direction: column;
   display: flex;
 }
+
+.row h5 {
+  color: lightgray;
+}
