@@ -8,16 +8,30 @@
   <body>
     <div class="container">
       <div class="card">
-        <form>
-          <h3>Nama Lengkap</h3>
-          <input class="form" type="text" name="Nama Lengkap" />
-          <h3>Email</h3>
-          <input class="form" type="text" name="Email" />
-          <h3>Alamat</h3>
-          <textarea class="form" name="Alamat" cols="30" rows="10"></textarea>
-          <input type="button" value="Daftar" />
-        </form>
+        <div class="form-container">
+          <form>
+            <p>Nama Lengkap:</p>
+            <input class="form" type="text" name="Nama Lengkap" id="nama" />
+            <p>Email:</p>
+            <input class="form" type="text" name="Email" id="email" />
+            <p>Alamat:</p>
+            <textarea
+              class="form"
+              name="Alamat"
+              cols="30"
+              rows="30"
+              id="alamat"
+            ></textarea>
+          </form>
+        </div>
+        <input
+          class="button"
+          type="button"
+          value="Daftar"
+          onclick="validate()"
+        />
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
