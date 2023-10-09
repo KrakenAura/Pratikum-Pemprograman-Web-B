@@ -3,9 +3,9 @@ function validate() {
   var email = document.getElementById("email").value;
   var alamat = document.getElementById("alamat").value;
 
-  if (nama == "" && email == "" && alamat == "") {
-    alert("Anda harus mengisi data secara lengkap!");
-  } else {
+  if (nama !== "" && email !== "" && alamat !== "") {
     alert("Anda sudah berhasil mengisi");
+  } else {
+    alert("Anda harus mengisi data secara lengkap!");
   }
 }
