@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400");
+
+body {
+  font-size: 60%;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.frame-2 {
+  background-color: #fff;
+  display: flex;
+  height: 480px;
+  padding: 0 43.2px;
+  width: 1152px;
+  max-width: 100%;
+  position: relative;
+}
+.overlay-group {
+  height: 412.8px;
+  margin-top: 33.6px;
+  position: relative;
+  width: 984px;
+  max-width: 100%;
+}
+
+.rectangle-3 {
+  color: #fcfcfc;
+  background-color: #ff8800;
+  height: 328.8px;
+  width: 505.2px;
+  left: 479.2px;
+  top: 54.4px;
+  position: absolute;
+}
+iframe {
+  background-color: #c6c4c4;
+  height: 307.2px;
+  width: 307.2px;
+  left: 96px;
+  top: 56.8px;
+  position: absolute;
+  border: 0;
+}
+.rectangle-2 {
+  background-color: #f5f2f2;
+  height: 412.8px;
+  width: 813px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border: 0;
+}
+.rectangle-3 .content {
+  margin: 32px;
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

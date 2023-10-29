@@ -1,0 +1,25 @@
+.hero {
+  background-image: url("../../../public/hero.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  color: #e6e2e2;
+  font-size: 72px;
+}
+.hero p {
+  color: #e6e2e2;
+  font-size: 20px;
+}
+.hero .content {
+  position: relative;
+  text-align: left;
+  flex-direction: column;
+  display: flex;
+}

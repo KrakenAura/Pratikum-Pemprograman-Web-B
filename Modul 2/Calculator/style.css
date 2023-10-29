@@ -109,3 +109,25 @@ body {
 .triple {
   flex-basis: 73%;
 }
+.calc-button sup {
+  font-size: 0.6em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.display {
+  text-align: right;
+  height: 70px;
+  border-radius: 15px;
+}
+
+.display input {
+  width: 100%;
+  height: 85%;
+  border: none;
+  font-size: 36px;
+  outline: none;
+  text-align: right;
+  color: white;
+  border-radius: 10px;
+}

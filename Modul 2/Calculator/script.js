@@ -1,90 +1,63 @@
-let playTotal = 0;
-let buffer = "0";
-let previousOperator;
+let input = "0";
 
-const screen = document.querySelector(".screen");
+function updateDisplay() {
+  document.getElementById("result").value = input;
+}
 
-function buttonClick(value) {
-  if (isNaN(value)) {
-    handleSymbol(value);
+function appendToDisplay(char) {
+  if (input === "0") {
+    input = char;
   } else {
-    handleNumber(value);
+    input += char;
   }
-  screen.innerText = buffer;
+  updateDisplay();
 }
 
-function handleSymbol(symbol) {
-  switch (symbol) {
-    case "C":
-      buffer = "0";
-      playTotal = 0;
-      break;
-    case "=":
-      if (previousOperator === null) {
-        return;
-      }
-      flushOperation(parseInt(buffer));
-      previousOperator = null;
-      buffer = playTotal;
-      playTotal = 0;
-      break;
-    case "←":
-      if (buffer.length === 1) {
-        buffer = "0";
-      } else {
-        buffer = buffer.substring(0, buffer.length - 1);
-      }
-      break;
-    case "+":
-    case "-":
-    case "×":
-    case "÷":
-      handelMath(symbol);
-      break;
+function clearDisplay() {
+  input = "0";
+  updateDisplay();
+}
+
+function deleteCharacter() {
+  if (input.length > 0) {
+    input = input.slice(0, -1);
+    updateDisplay();
   }
 }
 
-function handelMath(symbol) {
-  if (buffer === "0") {
-    return;
+function calculateResult() {
+  try {
+    input = eval(input);
+  } catch (error) {
+    input = "Error";
   }
-  const intBuffer = parseInt(buffer);
-
-  if (playTotal === 0) {
-    playTotal = intBuffer;
-  } else {
-    flushOperation(intBuffer);
-  }
-  previousOperator = symbol;
-  buffer = "0";
+  updateDisplay();
 }
 
-function flushOperation(intBuffer) {
-  if (previousOperator === "+") {
-    playTotal += intBuffer;
-  } else if (previousOperator === "-") {
-    playTotal -= intBuffer;
-  } else if (previousOperator === "×") {
-    playTotal *= intBuffer;
-  } else if (previousOperator === "÷") {
-    playTotal /= intBuffer;
+function calculateLog() {
+  try {
+    input = Math.log(eval(input));
+  } catch (error) {
+    input = "Error";
   }
+  updateDisplay();
 }
 
-function handleNumber(numberString) {
-  if (buffer === "0") {
-    buffer = numberString;
-  } else {
-    buffer += numberString;
+function calculateSqrt() {
+  try {
+    input = Math.sqrt(eval(input));
+  } catch (error) {
+    input = "Error";
   }
+  updateDisplay();
+}
+function calculateSquare() {
+  try {
+    input = Math.pow(eval(input), 2);
+  } catch (error) {
+    input = "Error";
+  }
+  updateDisplay();
 }
 
-function init() {
-  document
-    .querySelector(".calc-buttons")
-    .addEventListener("click", function (event) {
-      buttonClick(event.target.innerText);
-    });
-}
-
-init();
+updateDisplay();

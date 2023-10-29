@@ -9,17 +9,23 @@ const Navbar = () => {
     <>
       <div class="navbar">
         <a class="logo" href="#">
-          <img src="../assets/logo-ilab.png" alt="" />
+          <img src="/logo-ilab.png" alt="Logo iLab" />
         </a>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="" onClick={() => navigate("/")}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="" onClick={() => navigate("/contact")}>
+              Contact
+            </a>
           </li>
           <li>
-            <a href="#">About Us</a>
+            <a href="" onClick={() => navigate("/about")}>
+              About Us
+            </a>
           </li>
         </ul>
         <div class="buttons">
