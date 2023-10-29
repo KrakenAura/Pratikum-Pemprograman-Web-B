@@ -13,7 +13,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 /* Style the logo */
@@ -39,6 +39,7 @@ li {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  font-size: 20px;
 }
 
 /* Style the signup and login buttons */

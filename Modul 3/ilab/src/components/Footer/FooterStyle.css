@@ -34,3 +34,8 @@
   align-items: center;
   margin-bottom: 10px;
 }
+
+.title {
+  font-weight: bold;
+  color: gray;
+}

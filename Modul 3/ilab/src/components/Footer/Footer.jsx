@@ -15,21 +15,21 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer-right">
-          <p className="content">Services</p>
+          <p className="content title">Services</p>
           <p className="content">Email Marketing</p>
           <p className="content">Campaigns</p>
           <p className="content">Branding</p>
           <p className="content">Offline</p>
         </div>
         <div className="footer-right">
-          <p className="content">About</p>
+          <p className="content title">About</p>
           <p className="content">Our Story</p>
           <p className="content">Benefits</p>
           <p className="content">Team</p>
           <p className="content">Careers</p>
         </div>
         <div className="footer-right">
-          <p className="content">Contact Us</p>
+          <p className="content title">Contact Us</p>
           <div className="content">
             <img
               src="/logo-facebook.png"
